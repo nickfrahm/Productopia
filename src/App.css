@@ -34,7 +34,6 @@ img {
 
 /*Navigation*/
 .nav {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,4 +50,25 @@ img {
 
 #menu:hover {
   cursor: pointer;
+}
+
+/*Pomodoro Component*/
+.pomodoro { /*Main Card Pomo Screen*/
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.row { /*All Rows in Pomodoro Card*/
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row > * { /* Give each row item a little room */
+  padding: 16px;
+  background-color: #ff8a65;
 }
