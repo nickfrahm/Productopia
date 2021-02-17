@@ -26,8 +26,8 @@ img {
 
 /*START OF MY CSS*/
 /*Colors: 
-  Primary: #43a047; Green
-  Secondary: #ff8a65; Light Orange
+  Primary: #f44336; Red
+  Secondary: #42a5f5; Light Blue
 */
 /*Google Font*/
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
@@ -37,7 +37,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #43a047;
+  background-color: #f44336;
 }
 
 .nav-item {
@@ -65,7 +65,7 @@ img {
   top: 0;
   width: 20vw;
   height: 100vh;
-  background-color: #ff8a65;
+  background-color: #42a5f5;
   box-shadow: 2px 0px 8px #000;
 }
 
@@ -85,7 +85,37 @@ img {
   justify-content: space-evenly;
 }
 
+.timer-row {
+  height: 50vh;
+}
+
 .row > * { /* Give each row item a little room */
   padding: 16px;
-  background-color: #ff8a65;
+  /*background-color: #42a5f5;*/
+}
+
+.break-tab-row > p {
+  width: 33.333%;
+  text-align: center;
+  border: 1px solid lightgrey;
+}
+
+.start-stop-row > p {
+  width: 25%;
+  text-align: center;
+  border: 1px solid lightgrey;
+}
+
+.break-tab-row>p:hover {
+  cursor: pointer;
+  background-color: #42a5f5;
+}
+
+.start-stop-row>p:hover {
+  cursor: pointer;
+  background-color: #42a5f5;
+}
+
+.active {
+  background-color: #42a5f5;
 }
