@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 
 
 function Pomodoro() {
-  const [timer, setTimer] = useState('25:00');
   const [activeTab, setActiveTab] = useState("work");
+  const [timerOnOff, setTimerOnOff] = useState(false);
   
   function handleWorkBreakClick(e) {
     setActiveTab(e.target.id);
@@ -17,7 +17,7 @@ function Pomodoro() {
         <p id="long" className={activeTab == "long" ? 'active' : ''} onClick={handleWorkBreakClick}>Long Break</p>
       </div>
       <div className="row timer-row">
-        {/*Add Timer Component Here*/}
+        <Timer activeTab={activeTab} isOn={timerOnOff} />
       </div>
       <div className="row start-stop-row">
         <p>Start</p>
