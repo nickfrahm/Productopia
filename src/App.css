@@ -109,13 +109,13 @@ img {
 .break-tab-row > p {
   width: 33.333%;
   text-align: center;
-  border: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .start-stop-row > p {
   width: 25%;
   text-align: center;
-  border: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
 }
 
 .break-tab-row>p:hover {
@@ -130,4 +130,8 @@ img {
 
 .active {
   background-color: #42a5f5;
+}
+
+.inactive {
+  background-color: #90caf9;
 }
