@@ -5,7 +5,7 @@ import Pomodoro from './components/Pomodoro.js'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Nav />
       <Pomodoro />
     </div>

@@ -29,10 +29,11 @@ img {
   Primary: #f44336; Red
   Secondary: #42a5f5; Light Blue
 */
-/*Google Font*/
-@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap'); /*site font*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap'); /*timer*/
 
-.App {
+.app {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -78,7 +79,25 @@ img {
   height: 100vh;
   background-color: #42a5f5;
   box-shadow: 2px 0px 8px #000;
-  transition: 0.3s
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.hideMask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.showMask {
+  background-color: rgba(77, 65, 65, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
 }
 
 /*Pomodoro Component*/
@@ -133,4 +152,10 @@ img {
 
 .inactive {
   background-color: #90caf9;
+}
+
+/*Timer Styles*/
+.timer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 8em;
 }

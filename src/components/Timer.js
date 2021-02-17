@@ -5,7 +5,7 @@ function Timer(activeTab, isOn) {
 
     return (
       <div className="timer">
-        
+        25:00
       </div>
     );
   }

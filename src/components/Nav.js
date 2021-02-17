@@ -19,6 +19,8 @@ function Nav() {
         className="nav-item" id="menu-icon"
         onClick={handleNavClick}  
       />
+      <div className={showMenu ? 'hideMask' : 'showMask'}
+           onClick={handleNavClick}></div>
       <div className={showMenu ? 'hideMenu' : 'showMenu'}>
         <Menu />
       </div>
