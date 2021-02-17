@@ -78,12 +78,12 @@ img {
   height: 100vh;
   background-color: #42a5f5;
   box-shadow: 2px 0px 8px #000;
+  transition: 0.3s
 }
 
 /*Pomodoro Component*/
 .pomodoro { /*Main Card Pomo Screen*/
   width: 80%;
-  
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,6 @@ img {
 
 .row > * { /* Give each row item a little room */
   padding: 16px;
-  /*background-color: #42a5f5;*/
 }
 
 .break-tab-row > p {
