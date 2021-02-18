@@ -6,6 +6,7 @@ function Pomodoro() {
   const [activeTab, setActiveTab] = useState("work");
   const [timerOn, setTimerOn] = useState(false);
   const [resetTime, setResetTime] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   function handleWorkBreakClick(e) {
     setActiveTab(e.target.id);
@@ -23,6 +24,10 @@ function Pomodoro() {
     setResetTime(!resetTime);
   }
 
+  function handleSettingsClick() {
+    setShowSettings(true);
+  }
+
   return (
     <div className="pomodoro">
       <div className="row break-tab-row">
@@ -37,7 +42,7 @@ function Pomodoro() {
         <p style={{backgroundColor: '#81c784'}} onClick={handleTimerStart}>Start</p>
         <p style={{backgroundColor: '#e57373'}} onClick={handleTimerStop}>Stop</p>
         <p style={{backgroundColor: '#fff176'}} onClick={handleReset}>Reset</p>
-        <p style={{backgroundColor: '#e0e0e0'}}>Settings</p> 
+        <p style={{backgroundColor: '#e0e0e0'}} onClick={handleSettingsClick}>Settings</p> 
       </div>
     </div>
   );
