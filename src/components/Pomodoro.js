@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import Timer from './Timer'
+import Settings from './Settings'
 
 function Pomodoro() {
   const [activeTab, setActiveTab] = useState("work");
   const [timerOn, setTimerOn] = useState(false);
-  const [timerLength, setTimerLength] = useState(2000);
+  const [resetTime, setResetTime] = useState(false);
 
   function handleWorkBreakClick(e) {
     setActiveTab(e.target.id);
@@ -19,12 +20,9 @@ function Pomodoro() {
   }
 
   function handleReset() {
-    setTimerLength(60000);
+    setResetTime(!resetTime);
   }
 
-  function handleTimerChange(newLength) {
-    setTimerLength(newLength);
-  }
   return (
     <div className="pomodoro">
       <div className="row break-tab-row">
@@ -33,7 +31,7 @@ function Pomodoro() {
         <p id="long" className={activeTab == "long" ? 'active' : 'inactive'} onClick={handleWorkBreakClick}>Long Break</p>
       </div>
       <div className="row timer-row">
-        <Timer timerOn={timerOn} timerLength={timerLength} handleChange={handleTimerChange} />
+        <Timer timerOn={timerOn} resetTime={resetTime} onReset={setResetTime} />
       </div>
       <div className="row start-stop-row">
         <p style={{backgroundColor: '#81c784'}} onClick={handleTimerStart}>Start</p>

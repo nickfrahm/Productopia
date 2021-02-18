@@ -57,11 +57,15 @@ img {
 } 
 
 #menu-icon {
-  font-size: 28px;
+  display: block;
+  font-size: 42px;
+  padding: 0px 6px 0px 6px;
 }
 
 #menu-icon:hover {
   cursor: pointer;
+  background-color: #ef9a9a;
+  border-radius: 3px;
 }
 
 .hideMenu {

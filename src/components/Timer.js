@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react'
 
 function Timer(props) {
-    const [seconds, setSeconds] = useState(props.timerLength);
-
+    const [seconds, setSeconds] = useState(10000);
+    
     useEffect(() => {
-        setSeconds(props.timerLength);
-    },[props.timerLength]);
+        setSeconds(10000);
+    }, [props.resetTime]);
 
     useEffect(() => {
         let interval = null;
@@ -15,6 +15,7 @@ function Timer(props) {
             }, 1000);
         } else if (seconds < 0) {
             clearInterval(interval)
+            props.timerOn = false;
         }
         return () => clearInterval(interval);
     }, [props.timerOn, seconds]);
