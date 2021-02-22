@@ -182,8 +182,9 @@ img {
   left: 50vw;
   width: 40%;
   height: 30%;
-  margin-left: -20%;
-  margin-top: -15%;
+  margin-left: -20%; /*Half the height and width to center top corner*/
+  margin-top: -15%; /*See comment above*/
   background-color: yellow;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   z-index: 1000;
 }
