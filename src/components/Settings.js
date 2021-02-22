@@ -8,8 +8,8 @@ const Settings = (props) => {
     return (
         <div id='settings'>
             <div className="settingsHeader">
-                <h2>Pomodoro Settings</h2>
-                <span id="cancelX">X</span>
+                <h2 className="header-text">Pomodoro Settings</h2>
+                <span className="header-text" id="cancelX">X</span>
             </div>
             <div className="settingsForm">
                 <input 

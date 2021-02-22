@@ -230,3 +230,9 @@ img {
   /*background-color: green;*/
   padding: 10px;
 }
+
+.header-text {
+  font-size: 32px;
+  line-height: 150%;
+  padding: 0px  12px;
+}
