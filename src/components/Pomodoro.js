@@ -21,6 +21,7 @@ function Pomodoro() {
   }
 
   function handleReset() {
+    setTimerOn(false);
     setResetTime(!resetTime);
   }
 

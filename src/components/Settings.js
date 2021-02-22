@@ -15,17 +15,20 @@ const Settings = (props) => {
                 <input 
                     className="txt-timeSetting" 
                     id="work" 
+                    placeholder="Work Time (minutes)"
                 >
 
                 </input>
                 <input 
                     className="txt-timeSetting" 
                     id="short" 
+                    placeholder="Short Break (minutes)"
                 >    
                 </input>
                 <input 
                     className="txt-timeSetting" 
-                    id="long" 
+                    id="long"
+                    placeholder="Long Break (minutes)" 
                 >
                 </input>
             </div>

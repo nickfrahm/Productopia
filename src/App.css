@@ -184,7 +184,49 @@ img {
   height: 30%;
   margin-left: -20%; /*Half the height and width to center top corner*/
   margin-top: -15%; /*See comment above*/
-  background-color: yellow;
+  /*background-color: yellow;*/
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   z-index: 1000;
+}
+
+#settings {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #efefef;
+}
+
+#settings input {
+  width: 60%;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid darkgrey;
+  border-radius: 3px;
+}
+
+.settingsHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #42a5f5;
+}
+
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background-color: red;*/
+}
+
+.settingsFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  /*background-color: green;*/
+  padding: 10px;
 }
