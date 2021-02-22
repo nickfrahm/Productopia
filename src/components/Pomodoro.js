@@ -48,8 +48,10 @@ function Pomodoro() {
       <div className={showSettings == true ? 'showMask' : 'hideMask'}
            onClick={handleSettingsClick}>
       </div>
+      <div  className={showSettings == true ? "settings showSettings" : "settings hideSettings"}>
+        <Settings />
+      </div>
       
-      <Settings className={showSettings == true ? "showSettings" : "hideSettings"} />
     </div>
   );
 }

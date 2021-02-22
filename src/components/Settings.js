@@ -6,42 +6,33 @@ const Settings = (props) => {
     }
     
     return (
-        <div className="settings">
+        <div id='settings'>
             <div className="settingsHeader">
                 <h2>Pomodoro Settings</h2>
                 <span id="cancelX">X</span>
             </div>
             <div className="settingsForm">
-                <form>
-                    <input className="txt-timeSetting" 
-                        id="work" 
-                        placeholder="Work Time" 
-                        type="number" 
-                        min="1"
-                        max="59">
+                <input 
+                    className="txt-timeSetting" 
+                    id="work" 
+                >
 
-                    </input>
-                    <input 
-                        className="txt-timeSetting" 
-                        id="short" 
-                        placeholder="Short Break" 
-                        type="number" 
-                        min="1"
-                        max="59">    
-                    </input>
-                    <input 
-                        className="txt-timeSetting" 
-                        id="long" 
-                        placeholder="Long Break" 
-                        type="number" 
-                        min="1"
-                        max="59">
-                    </input>
-                    <button className="btn-saveSettings" type="button">Save</button>
-                    <button className="btn-closeSettings" type="button">Close</button>
-                </form>
+                </input>
+                <input 
+                    className="txt-timeSetting" 
+                    id="short" 
+                >    
+                </input>
+                <input 
+                    className="txt-timeSetting" 
+                    id="long" 
+                >
+                </input>
             </div>
-            <div className="settingsFooter"></div>
+            <div className="settingsFooter">
+                <button className="btn-saveSettings" type="button">Save</button>
+                <button className="btn-closeSettings" type="button">Close</button>
+            </div>
         </div>
     );
 }
