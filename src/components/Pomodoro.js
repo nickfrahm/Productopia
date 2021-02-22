@@ -25,7 +25,7 @@ function Pomodoro() {
   }
 
   function handleSettingsClick() {
-    setShowSettings(true);
+    setShowSettings(!showSettings);
   }
 
   return (
@@ -44,6 +44,12 @@ function Pomodoro() {
         <p style={{backgroundColor: '#fff176'}} onClick={handleReset}>Reset</p>
         <p style={{backgroundColor: '#e0e0e0'}} onClick={handleSettingsClick}>Settings</p> 
       </div>
+      
+      <div className={showSettings == true ? 'showMask' : 'hideMask'}
+           onClick={handleSettingsClick}>
+      </div>
+      
+      <Settings className={showSettings == true ? "showSettings" : "hideSettings"} />
     </div>
   );
 }
