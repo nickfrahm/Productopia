@@ -1,10 +1,15 @@
 import React, {useState} from 'react';
 
 const Settings = (props) => {
-    function handleSubmit(e) {
+    
+    function handleSave() {
         
     }
     
+    function handleClose() {
+        props.setShowSettings(false)
+    }
+
     return (
         <div id='settings'>
             <div className="settingsHeader">
@@ -34,7 +39,7 @@ const Settings = (props) => {
             </div>
             <div className="settingsFooter">
                 <button className="btn-saveSettings" type="button">Save</button>
-                <button className="btn-closeSettings" type="button">Close</button>
+                <button className="btn-closeSettings" type="button" onClick={handleClose}>Close</button>
             </div>
         </div>
     );

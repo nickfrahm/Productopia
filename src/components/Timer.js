@@ -21,15 +21,15 @@ function Timer(props) {
     }, [props.timerOn, seconds]);
 
     function convertToReadableTime(time) {
-        let minutes = 0;
+        let mins = 0;
         let secs = time/1000;
 
         while (secs - 59 > 0) {
             secs -= 60;
-            minutes++;
+            mins++;
         }
 
-        return (minutes < 10 ? '0' + minutes : minutes) + ":" + (secs < 10 ? '0' + secs : secs);
+        return (mins < 10 ? '0' + mins : mins) + ":" + (secs < 10 ? '0' + secs : secs);
     }
 
     return (

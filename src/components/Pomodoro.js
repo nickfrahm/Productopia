@@ -7,6 +7,7 @@ function Pomodoro() {
   const [timerOn, setTimerOn] = useState(false);
   const [resetTime, setResetTime] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [pomodoroTimes, setPomodoroTimes] = useState([1500000,300000,1200000])
 
   function handleWorkBreakClick(e) {
     setActiveTab(e.target.id);
@@ -50,7 +51,7 @@ function Pomodoro() {
            onClick={handleSettingsClick}>
       </div>
       <div  className={showSettings == true ? "settings showSettings" : "settings hideSettings"}>
-        <Settings />
+        <Settings setShowSettings={setShowSettings}/>
       </div>
       
     </div>
