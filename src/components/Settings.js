@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
 
 const Settings = (props) => {
-    
+    const [workTime, setWorkTime] = useState(5000);
+    const [shortTime, setShortTime] = useState(5000);
+    const [longTime, setLongTime] = useState(5000);
+
     function handleSave() {
         
+        props.changeTimeSettings([workTime, shortTime, longTime]);
+        handleClose();
     }
     
     function handleClose() {
-        props.setShowSettings(false)
+        props.setShowSettings(false);
     }
 
     return (
@@ -21,6 +26,7 @@ const Settings = (props) => {
                     className="txt-timeSetting" 
                     id="work" 
                     placeholder="Work Time (minutes)"
+                    onChange={e => setWorkTime(e.target.value)}
                 >
 
                 </input>
@@ -38,7 +44,7 @@ const Settings = (props) => {
                 </input>
             </div>
             <div className="settingsFooter">
-                <button className="btn-saveSettings" type="button">Save</button>
+                <button className="btn-saveSettings" type="button" onClick={handleSave}>Save</button>
                 <button className="btn-closeSettings" type="button" onClick={handleClose}>Close</button>
             </div>
         </div>

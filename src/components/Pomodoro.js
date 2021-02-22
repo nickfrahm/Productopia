@@ -30,6 +30,10 @@ function Pomodoro() {
     setShowSettings(!showSettings);
   }
 
+  function changeTimeSettings(newSettings) {
+    setPomodoroTimes(newSettings);
+  }
+
   return (
     <div className="pomodoro">
       <div className="row break-tab-row">
@@ -38,7 +42,12 @@ function Pomodoro() {
         <p id="long" className={activeTab == "long" ? 'active' : 'inactive'} onClick={handleWorkBreakClick}>Long Break</p>
       </div>
       <div className="row timer-row">
-        <Timer timerOn={timerOn} resetTime={resetTime} onReset={setResetTime} />
+        <Timer 
+          timerOn={timerOn} 
+          resetTime={resetTime} 
+          onReset={setResetTime} 
+          pomodoroTimes={pomodoroTimes} 
+        />
       </div>
       <div className="row start-stop-row">
         <p style={{backgroundColor: '#81c784'}} onClick={handleTimerStart}>Start</p>
@@ -51,7 +60,10 @@ function Pomodoro() {
            onClick={handleSettingsClick}>
       </div>
       <div  className={showSettings == true ? "settings showSettings" : "settings hideSettings"}>
-        <Settings setShowSettings={setShowSettings}/>
+        <Settings 
+          setShowSettings={setShowSettings}
+          changeTimeSettings={changeTimeSettings}
+        />
       </div>
       
     </div>
