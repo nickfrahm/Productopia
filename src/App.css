@@ -24,7 +24,7 @@ img {
   height: auto;
 }
 
-/*START OF MY CSS*/
+/*****************START OF MY CSS*****************/
 /*Colors: 
   Primary: #f44336; Red
   Secondary: #42a5f5; Light Blue
@@ -40,7 +40,7 @@ img {
   justify-content: center;
 }
 
-/*Navigation*/
+/********Navigation********/
 .nav {
   position: fixed;
   top: 0;
@@ -104,7 +104,7 @@ img {
   z-index: 1000;
 }
 
-/*Pomodoro Component*/
+/********Pomodoro Component********/
 .pomodoro { /*Main Card Pomo Screen*/
   width: 80%;
   margin: auto;
@@ -158,13 +158,13 @@ img {
   background-color: #90caf9;
 }
 
-/*Timer Styles*/
+/********Timer Styles********/
 .timer {
   font-family: 'Orbitron', sans-serif;
   font-size: 8em;
 }
 
-/*Settings Modal Styles*/
+/********Settings Modal Styles********/
 .showSettings {
   transition: .4s;
 }
@@ -213,7 +213,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #42a5f5;
+  background-color: #f44336;
 }
 
 .settingsForm {
