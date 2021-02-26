@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
 
 function Timer(props) {
-    const [seconds, setSeconds] = useState(10000);
+    const [seconds, setSeconds] = useState(props.activeTabTime);
     
+    /*Use Effect for reset to set to active tab time default*/
     useEffect(() => {
-        setSeconds(10000);
-    }, [props.resetTime]);
+        setSeconds(props.activeTabTime);
+    }, [props.resetTime, props.activeTab]);
 
+    /*Use Effect for timer countdown*/
     useEffect(() => {
         let interval = null;
         if (props.timerOn && seconds > 0) {

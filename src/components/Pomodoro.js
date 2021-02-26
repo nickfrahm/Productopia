@@ -32,6 +32,7 @@ function Pomodoro() {
 
   function changeTimeSettings(newSettings) {
     setPomodoroTimes(newSettings);
+    setActiveTab(activeTab)
   }
 
   return (
@@ -45,8 +46,9 @@ function Pomodoro() {
         <Timer 
           timerOn={timerOn} 
           resetTime={resetTime} 
-          onReset={setResetTime} 
-          pomodoroTimes={pomodoroTimes} 
+          onReset={setResetTime}
+          activeTab={activeTab} 
+          activeTabTime={activeTab === "work" ? pomodoroTimes[0] : activeTab === "short" ? pomodoroTimes[1] : pomodoroTimes[2]} 
         />
       </div>
       <div className="row start-stop-row">
@@ -63,6 +65,7 @@ function Pomodoro() {
         <Settings 
           setShowSettings={setShowSettings}
           changeTimeSettings={changeTimeSettings}
+          pomodoroTimes={pomodoroTimes}
         />
       </div>
       
