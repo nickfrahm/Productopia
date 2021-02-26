@@ -6,7 +6,7 @@ function Timer(props) {
     /*Use Effect for reset to set to active tab time default*/
     useEffect(() => {
         setSeconds(props.activeTabTime);
-    }, [props.resetTime, props.activeTab]);
+    }, [props.resetTime, props.activeTab, props.pomoTimes]);
 
     /*Use Effect for timer countdown*/
     useEffect(() => {

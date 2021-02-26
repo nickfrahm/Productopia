@@ -32,7 +32,6 @@ function Pomodoro() {
 
   function changeTimeSettings(newSettings) {
     setPomodoroTimes(newSettings);
-    setActiveTab(activeTab)
   }
 
   return (
@@ -49,6 +48,7 @@ function Pomodoro() {
           onReset={setResetTime}
           activeTab={activeTab} 
           activeTabTime={activeTab === "work" ? pomodoroTimes[0] : activeTab === "short" ? pomodoroTimes[1] : pomodoroTimes[2]} 
+          pomoTimes={pomodoroTimes}
         />
       </div>
       <div className="row start-stop-row">

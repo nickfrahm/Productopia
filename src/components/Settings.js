@@ -19,13 +19,14 @@ const Settings = (props) => {
             props.changeTimeSettings([workTime, shortTime, longTime]);
             handleClose();
         } else {
-            alert("Please make sure you entered whole numbers.");
+            alert("Please make sure you entered whole numbers in each box.");
         }
-        return (setError(true));
+        /*return (setError(true)); removed because it was giving a false positive*/
     }
     
     function handleClose() {
-        props.setShowSettings(false);
+        if (!error) props.setShowSettings(false);
+        else alert("Please make sure you entered whole numbers in each box.");
     }
 
     return (
