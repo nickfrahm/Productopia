@@ -32,7 +32,11 @@ const Settings = (props) => {
         <div id='settings'>
             <div className="settingsHeader">
                 <h2 className="header-text">Pomodoro Settings</h2>
-                <span className="header-text" id="cancelX">X</span>
+                <span 
+                    className="header-text" 
+                    id="cancelX"
+                    onClick={handleClose}>X
+                </span>
             </div>
             <div className="settingsForm">
                 <input 
