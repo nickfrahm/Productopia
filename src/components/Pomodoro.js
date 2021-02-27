@@ -8,6 +8,7 @@ function Pomodoro() {
   const [resetTime, setResetTime] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [pomodoroTimes, setPomodoroTimes] = useState([1500000,300000,1200000])
+  const [error, setError] = useState(true);
 
   function handleWorkBreakClick(e) {
     setActiveTab(e.target.id);
@@ -58,14 +59,18 @@ function Pomodoro() {
         <p style={{backgroundColor: '#e0e0e0'}} onClick={handleSettingsClick}>Settings</p> 
       </div>
       
-      <div className={showSettings == true ? 'showMask' : 'hideMask'}
-           onClick={handleSettingsClick}>
+      <div 
+        className={showSettings == true ? 'showMask' : 'hideMask'}
+        /*onClick={error == false ? handleSettingsClick : undefined}*/
+      >
       </div>
       <div  className={showSettings == true ? "settings showSettings" : "settings hideSettings"}>
         <Settings 
           setShowSettings={setShowSettings}
           changeTimeSettings={changeTimeSettings}
           pomodoroTimes={pomodoroTimes}
+          error={error}
+          setError={setError}
         />
       </div>
       

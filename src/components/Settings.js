@@ -4,28 +4,27 @@ const Settings = (props) => {
     const [workTime, setWorkTime] = useState();
     const [shortTime, setShortTime] = useState();
     const [longTime, setLongTime] = useState();
-    const [error, setError] = useState(true);
+    
 
     useEffect(() => {
         if (isNaN(workTime) || isNaN(shortTime) || isNaN(longTime) || workTime == "" || shortTime == "" || longTime == "") {
-            setError(true);
+            props.setError(true);
         } else {
-            setError(false);
+            props.setError(false);
         }
     }, [shortTime, workTime, longTime]);
 
     function handleSave() {
-        if (error == false) {
+        if (props.error == false) {
             props.changeTimeSettings([workTime, shortTime, longTime]);
             handleClose();
         } else {
             alert("Please make sure you entered whole numbers in each box.");
         }
-        /*return (setError(true)); removed because it was giving a false positive*/
     }
     
     function handleClose() {
-        if (!error) props.setShowSettings(false);
+        if (!props.error) props.setShowSettings(false);
         else alert("Please make sure you entered whole numbers in each box.");
     }
 

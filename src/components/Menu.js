@@ -11,7 +11,7 @@ function Menu() {
                 Note Taker
             </li>
             <li>
-                Goal Tracker
+                My Personal Site
             </li>
         </ul>
       </div>
